@@ -23,7 +23,8 @@ import {
     IconLockCheck,
     IconFileDatabase,
     IconShieldLock,
-    IconListCheck
+    IconListCheck,
+    IconJoystick
 } from '@tabler/icons-react'
 
 // constant
@@ -51,7 +52,8 @@ const icons = {
     IconLockCheck,
     IconFileDatabase,
     IconShieldLock,
-    IconListCheck
+    IconListCheck,
+    IconJoystick
 }
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
@@ -146,6 +148,15 @@ const dashboard = {
                     icon: icons.IconKey,
                     breadcrumbs: true,
                     permission: 'apikeys:view'
+                },
+                {
+                    id: 'mitzvah-game',
+                    title: 'Mitzvah Run',
+                    type: 'item',
+                    url: '/mitzvah-game',
+                    icon: icons.IconJoystick,
+                    breadcrumbs: true,
+                    permission: 'chatflows:view'
                 },
                 {
                     id: 'document-stores',

@@ -41,6 +41,9 @@ const LoaderConfigPreviewChunks = Loadable(lazy(() => import('@/views/docstore/L
 const VectorStoreConfigure = Loadable(lazy(() => import('@/views/docstore/VectorStoreConfigure')))
 const VectorStoreQuery = Loadable(lazy(() => import('@/views/docstore/VectorStoreQuery')))
 
+// mitzvah game routing
+const MitzvahGame = Loadable(lazy(() => import('@/views/mitzvah-game')))
+
 // Evaluations routing
 const EvalEvaluation = Loadable(lazy(() => import('@/views/evaluations/index')))
 const EvaluationResult = Loadable(lazy(() => import('@/views/evaluations/EvaluationResult')))
@@ -185,6 +188,14 @@ const MainRoutes = {
             element: (
                 <RequireAuth permission={'documentStores:view'}>
                     <Documents />
+                </RequireAuth>
+            )
+        },
+        {
+            path: '/mitzvah-game',
+            element: (
+                <RequireAuth permission={'chatflows:view'}>
+                    <MitzvahGame />
                 </RequireAuth>
             )
         },
